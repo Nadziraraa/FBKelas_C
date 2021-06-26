@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">FBKelasC</string>
+    <string name="namaApp">FBKelasC</string>
+    <string name="btTambah">Tambah Data</string>
+    <string name="btLihat">Lihat Data</string>
+    <string name="bOK">Submit Data</string>
+    <string name="eno">Id Teman</string>
+    <string name="enama">Nama Teman</string>
+    <string name="txtJudul1">AKTIVITAS</string>
+    <string name="txtJudul2">Penambahan</string>
+    <string name="txtJudul3">Data Teman</string>
+    <string name="txtKosong"></string>
+
 </resources>

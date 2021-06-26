@@ -24,29 +24,27 @@ public class TambahTeman extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tambah_teman);
 
-        edNama    = findViewById(R.id.editNama);
-        edTelpon  = findViewById(R.id.editTelpon);
+        edNama = findViewById(R.id.editNama);
+        edTelpon = findViewById(R.id.editTelpon);
         submitBtn = findViewById(R.id.btnOk);
 
-        database  = FirebaseDatabase.getInstance().getReference();
+        database = FirebaseDatabase.getInstance().getReference();
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!(edNama.getText().toString().isEmpty()) && !(edTelpon.getText().toString().isEmpty()))
-                {
+                if (!(edNama.getText().toString().isEmpty()) && !(edTelpon.getText().toString().isEmpty())) {
                     nm = edNama.getText().toString();
                     tlp = edTelpon.getText().toString();
 
-                    submitTeman(new Teman(nm,tlp));
+                    submitTeman(new Teman(nm, tlp));
+
+                } else {
+                    Toast.makeText(TambahTeman.this, "Data tidak boleh kosong", Toast.LENGTH_SHORT).show();
 
                 }
-                else
-                    Toast.makeText(TambahTeman.this, "Data tidak boleh kosong",Toast.LENGTH_SHORT).show();
-
             }
         });
-
     }
 
     private void submitTeman(Teman tmn)
